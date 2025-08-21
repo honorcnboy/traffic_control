@@ -112,41 +112,32 @@ sudo systemctl start traffic-control
 
 ## 🛠 最佳配置策略
 **1. 保守型（严格防护）**：
-
+```bash
 BUFFER_PERCENT = 2      # 2%缓冲
-
 SAFETY_FACTOR = 0.97    # 97%安全系数
-
 HARD_LIMIT_GB = 1.0     # 1GB熔断
 
 •​​适用​​：高流量费用环境
-
 •效果​​：提前限速，避免接近熔断
-
+```
 **2. 平衡型（推荐）**：
-
+```bash
 BUFFER_PERCENT = 1      # 1%缓冲
-
 SAFETY_FACTOR = 0.99    # 99%安全系数
-
 HARD_LIMIT_GB = 0.5     # 0.5GB熔断
 
 •适用​​：大多数场景
-
 •效果​​：平衡安全性与可用性
-
+```
 **3. 宽松型（高利用率）**：
-
+```bash
 BUFFER_PERCENT = 0.5    # 0.5%缓冲
-
 SAFETY_FACTOR = 0.995   # 99.5%安全系数
-
 HARD_LIMIT_GB = 0.1     # 0.1GB熔断
 
 •​​适用​​：流量费用低的场景
-
 •效果​​：最大化流量利用率
-
+```
 
 ## 🌟 核心优势
 
