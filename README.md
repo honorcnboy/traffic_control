@@ -114,6 +114,7 @@ sudo systemctl start traffic-control
 BUFFER_PERCENT = 2      # 2%缓冲
 SAFETY_FACTOR = 0.97    # 97%安全系数
 HARD_LIMIT_GB = 1.0     # 1GB熔断
+
 •​​适用​​：高流量费用环境
 •效果​​：提前限速，避免接近熔断
 
