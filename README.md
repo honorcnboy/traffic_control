@@ -50,7 +50,7 @@ sudo pip3 install requests
 
 1. 下载脚本：
 ```bash
-sudo wget -O /root/traffic_control.py https://raw.githubusercontent.com/honorcnboy/traffic_control/main/traffic-control.py
+sudo wget -O /root/traffic-control.py https://raw.githubusercontent.com/honorcnboy/traffic_control/main/traffic-control.py
 ```
 
 2. 修改配置：
@@ -67,7 +67,7 @@ TELEGRAM_CHAT_ID = "your_chat_id"
 
 3. 运行脚本：
 ```bash
-sudo python3 /root/traffic_control.py
+sudo python3 /root/traffic-control.py
 ```
 ### 系统服务安装
 ```bash
@@ -81,7 +81,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python3 /root/traffic_control.py
+ExecStart=/usr/bin/python3 /root/traffic-control.py
 Restart=always
 RestartSec=60
 
@@ -147,13 +147,13 @@ sudo systemctl start traffic-control
 ## 🧪 测试与验证
 ```bash
 测试Telegram通知
-sudo python3 traffic_control.py --test-telegram
+sudo python3 traffic-control.py --test-telegram
 
 重置所有限制
-sudo python3 traffic_control.py --force-reset
+sudo python3 traffic-control.py --force-reset
 
 查看实时日志
-sudo tail -f /var/log/traffic_control.log
+sudo tail -f /var/log/traffic-control.log
 ```
 
 ## 🤝 贡献指南
